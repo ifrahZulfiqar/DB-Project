@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #212A3E;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dbproject.securityQuestionController">
+   <children>
+      <TextField fx:id="username" layoutX="123.0" layoutY="220.0" prefHeight="25.0" prefWidth="354.0" promptText="Enter your username" style="-fx-background-color: #212A3E; -fx-border-color: #fff; -fx-border-radius: 5; -fx-text-fill: #fff;" AnchorPane.leftAnchor="123.0" AnchorPane.rightAnchor="123.0" />
+      <Button layoutX="273.0" layoutY="298.0" mnemonicParsing="false" onAction="#handleSubmit" style="-fx-background-color: #394867; -fx-border-radius: 5;" text="Submit" textFill="WHITE" AnchorPane.leftAnchor="273.0" AnchorPane.rightAnchor="273.0" />
+      <FlowPane alignment="CENTER" layoutX="153.0" layoutY="65.0" prefHeight="27.0" prefWidth="295.0" AnchorPane.leftAnchor="153.0" AnchorPane.rightAnchor="152.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="How do I know it is really you?" />
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" layoutX="92.0" layoutY="106.0" prefHeight="94.0" prefWidth="376.0" AnchorPane.leftAnchor="92.0" AnchorPane.rightAnchor="91.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 32;" text="What is the name of your favourite animal?" textAlignment="CENTER" wrappingWidth="416.4375" />
+         </children>
+      </FlowPane>
+      <TextField fx:id="question" layoutX="123.0" layoutY="259.0" prefHeight="25.0" prefWidth="354.0" promptText="Answer your question..." style="-fx-background-color: #212A3E; -fx-border-color: #fff; -fx-border-radius: 5; -fx-text-fill: #fff;" />
+      <FlowPane alignment="CENTER" layoutX="201.0" layoutY="24.0" prefHeight="37.0" prefWidth="200.0" AnchorPane.leftAnchor="201.0" AnchorPane.rightAnchor="199.0">
+         <children>
+            <Text fx:id="notification" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" />
+         </children>
+      </FlowPane>
+   </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</AnchorPane>

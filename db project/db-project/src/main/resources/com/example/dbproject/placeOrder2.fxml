@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<ScrollPane fx:id="spane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="${spane.parent.height}" prefWidth="${spane.parent.width}" style="-fx-background-color: #212A3E;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dbproject.placeOrder2Controller">
+   <content>
+      <AnchorPane fx:id="apane" prefHeight="1000.0" prefWidth="${apane.parent.width}" style="-fx-background-color: #212A3E;">
+         <children>
+            <HBox alignment="CENTER" layoutX="297.0" prefHeight="57.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <ComboBox fx:id="searchComboBox" onAction="#handleSelection" prefHeight="25.0" prefWidth="244.0" />
+                  <Button mnemonicParsing="false" onAction="#handleSearch" style="-fx-background-color: #394867; -fx-border-radius: 5;" text="search" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="297.0" layoutY="71.0" prefHeight="260.0" prefWidth="793.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <VBox prefHeight="260.0" prefWidth="450.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="By Quantity">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Text>
+                        <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="318.0" style="-fx-border-style: solid; -fx-border-color: #fff;">
+                           <children>
+                              <FlowPane alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="39.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="G.Q" textAlignment="CENTER" wrappingWidth="38.244140625">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </FlowPane>
+                              <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="NEVER">
+                                 <children>
+                                    <Text fx:id="byQNameHeading" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </FlowPane>
+                              <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </FlowPane>
+                              <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </FlowPane>
+                              <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="U.Price">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </FlowPane>
+                              <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="T.Price">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </FlowPane>
+                              <FlowPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <ScrollPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #212A3E; -fx-border-style: hidden solid solid solid; -fx-border-color: #fff;">
+                           <content>
+                              <VBox fx:id="productsVbox" prefHeight="200.0" prefWidth="${productsVbox.parent.width}" style="-fx-background-color: #212A3E;" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="260.0" prefWidth="450.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="By Weight/Price">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Text>
+                        <HBox alignment="CENTER_LEFT" prefHeight="64.0" prefWidth="1189.0" style="-fx-border-style: solid; -fx-border-color: #fff;">
+                           <children>
+                              <FlowPane alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="39.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Weight">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </FlowPane>
+                              <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="NEVER">
+                                 <children>
+                                    <Text fx:id="byQNameHeading1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </FlowPane>
+                              <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </FlowPane>
+                              <FlowPane alignment="CENTER" maxWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Text fx:id="byWPQuantityHeading" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </FlowPane>
+                              <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="U.Price">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </FlowPane>
+                              <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="T.Price">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </FlowPane>
+                              <FlowPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <ScrollPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #212A3E; -fx-border-style: hidden solid solid solid; -fx-border-color: #fff;">
+                           <content>
+                              <VBox fx:id="productsVbox1" prefHeight="200.0" prefWidth="${productsVbox.parent.width}" style="-fx-background-color: #212A3E;" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="519.0" layoutY="363.0" prefHeight="204.0" prefWidth="1209.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <GridPane prefHeight="204.0" prefWidth="598.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <FlowPane alignment="CENTER" orientation="VERTICAL" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="93.0" text="Customer Name" textFill="WHITE" />
+                              <TextField fx:id="customerNameInput" onKeyTyped="#handleCustomerName" prefHeight="27.0" prefWidth="249.0" promptText="Name" style="-fx-background-color: #ffffff00; -fx-border-color: #fff; -fx-border-radius: 5; -fx-text-fill: #fff;" />
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER" orientation="VERTICAL" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="115.0" text="Customer Phone No." textFill="WHITE" />
+                              <TextField fx:id="customerPhoneNoInput" onKeyTyped="#handleCustomerPhoneNo" prefHeight="27.0" prefWidth="249.0" promptText="Phone No." style="-fx-background-color: #ffffff00; -fx-border-color: #fff; -fx-border-radius: 5; -fx-text-fill: #fff;" />
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER" orientation="VERTICAL" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="93.0" text="Discount" textFill="WHITE" />
+                              <FlowPane prefHeight="27.0" prefWidth="253.0">
+                                 <children>
+                                    <TextField fx:id="discountInPercentages" onKeyTyped="#handleInPercentages" prefHeight="27.0" prefWidth="125.0" promptText="In Percentages" style="-fx-background-color: #ffffff00; -fx-border-color: #fff; -fx-border-radius: 5; -fx-text-fill: #fff;" />
+                                    <TextField fx:id="discountInRuppees" onKeyTyped="#handleInRuppees" prefWidth="125.0" promptText="In Ruppess" style="-fx-background-color: #ffffff00; -fx-border-color: #fff; -fx-border-radius: 5; -fx-text-fill: #fff;" />
+                                 </children>
+                              </FlowPane>
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER" orientation="VERTICAL" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="93.0" text="Amount Paid" textFill="WHITE" />
+                              <TextField fx:id="amountPaidInput" onKeyTyped="#handleAmountPaid" prefHeight="27.0" prefWidth="249.0" promptText="Amount Paid in Rs" style="-fx-background-color: #ffffff00; -fx-border-color: #fff; -fx-border-radius: 5; -fx-text-fill: #fff;" />
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+            <HBox layoutX="1009.0" layoutY="305.0" prefHeight="100.0" prefWidth="200.0" />
+            <HBox alignment="CENTER" layoutX="533.0" layoutY="629.0" prefHeight="123.0" prefWidth="1209.0" spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <FlowPane fx:id="amountPaidContainer" orientation="VERTICAL" prefHeight="124.0" prefWidth="163.0" style="-fx-border-color: #fff; -fx-border-radius: 10;">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount Paid">
+                           <FlowPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </FlowPane.margin>
+                        </Text>
+                        <FlowPane fx:id="amountPaidText" alignment="CENTER" prefHeight="67.0" prefWidth="${amountPaidText.parent.prefWidth}">
+                           <children>
+                              <Text fx:id="amountPaid" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 50; -fx-font-weight: bold;" text="0" textAlignment="CENTER" textOrigin="CENTER" />
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </FlowPane>
+                  <FlowPane orientation="VERTICAL" prefHeight="124.0" prefWidth="163.0" style="-fx-border-color: #fff; -fx-border-radius: 10;">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Discount">
+                           <FlowPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </FlowPane.margin>
+                        </Text>
+                        <FlowPane fx:id="amountPaidText1" alignment="CENTER" prefHeight="67.0" prefWidth="${amountPaidText1.parent.prefWidth}">
+                           <children>
+                              <Text fx:id="discount" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 50; -fx-font-weight: bold;" text="0" textAlignment="CENTER" textOrigin="CENTER" />
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </FlowPane>
+                  <FlowPane orientation="VERTICAL" prefHeight="124.0" prefWidth="163.0" style="-fx-border-color: #fff; -fx-border-radius: 10;">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Bill">
+                           <FlowPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </FlowPane.margin>
+                        </Text>
+                        <FlowPane fx:id="amountPaidText2" alignment="CENTER" prefHeight="67.0" prefWidth="${amountPaidText2.parent.prefWidth}">
+                           <children>
+                              <Text fx:id="totalBill" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 50; -fx-font-weight: bold;" text="0" textAlignment="CENTER" textOrigin="CENTER" />
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </FlowPane>
+                  <FlowPane orientation="VERTICAL" prefHeight="124.0" prefWidth="163.0" style="-fx-border-color: #fff; -fx-border-radius: 10;">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Bill after Disconut">
+                           <FlowPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </FlowPane.margin>
+                        </Text>
+                        <FlowPane fx:id="amountPaidText3" alignment="CENTER" prefHeight="67.0" prefWidth="${amountPaidText3.parent.prefWidth}">
+                           <children>
+                              <Text fx:id="totalBillAfterDiscount" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 50; -fx-font-weight: bold;" text="0" textAlignment="CENTER" textOrigin="CENTER" />
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </FlowPane>
+                  <FlowPane orientation="VERTICAL" prefHeight="124.0" prefWidth="163.0" style="-fx-border-color: #fff; -fx-border-radius: 10;">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Amount">
+                           <FlowPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </FlowPane.margin>
+                        </Text>
+                        <FlowPane fx:id="amountPaidText4" alignment="CENTER" prefHeight="67.0" prefWidth="${amountPaidText4.parent.prefWidth}">
+                           <children>
+                              <Text fx:id="returnAmount" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 50; -fx-font-weight: bold;" text="0" textAlignment="CENTER" textOrigin="CENTER" />
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </FlowPane>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutY="773.0" prefHeight="67.0" prefWidth="1209.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #394867; -fx-border-radius: 5;" text="Place Order" textFill="WHITE" />
+               </children>
+            </HBox>
+         </children></AnchorPane>
+   </content>
+</ScrollPane>

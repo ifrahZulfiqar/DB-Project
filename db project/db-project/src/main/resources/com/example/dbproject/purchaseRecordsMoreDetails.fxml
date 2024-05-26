@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="493.0" prefWidth="452.0" style="-fx-background-color: #212A3E;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dbproject.purchaseRecordsMoreDetailsController">
+   <content>
+      <VBox fx:id="productsVbox" prefHeight="${productsVbox.parent.height}" prefWidth="${productsVbox.parent.width}" style="-fx-background-color: #212A3E;">
+         <children>
+            <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="59.0" prefWidth="449.0">
+               <children>
+                  <Text fx:id="purchaseId" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Purchase ID" />
+               </children>
+            </HBox>
+            <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" prefWidth="344.0" style="-fx-border-style: solid hidden solid hidden; -fx-border-color: #fff;">
+               <children>
+                  <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" style="-fx-border-style: hidden solid hidden hidden; -fx-border-color: #fff;" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15; -fx-font-weight: bold;" text="Name" />
+                     </children>
+                  </FlowPane>
+                  <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" style="-fx-border-style: hidden solid hidden hidden; -fx-border-color: #fff;" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15; -fx-font-weight: bold;" text="Quantity" />
+                     </children>
+                  </FlowPane>
+                  <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15; -fx-font-weight: bold;" text="Price" />
+                     </children>
+                  </FlowPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>

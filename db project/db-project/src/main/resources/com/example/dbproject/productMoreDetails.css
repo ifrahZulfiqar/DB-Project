@@ -1,0 +1,7 @@
+.stroke Line {
+    -fx-stroke: #fff;
+}
+
+.left-margin {
+    -fx-margin: 0 0 0 10;
+}

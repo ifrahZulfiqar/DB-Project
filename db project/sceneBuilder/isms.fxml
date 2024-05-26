@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="739.0" prefWidth="1088.0" style="-fx-background-color: #212A3E;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="84.0" prefWidth="1088.0" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label prefHeight="63.0" prefWidth="91.0" text="In Stock" textFill="WHITE" HBox.hgrow="NEVER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="63.0" prefWidth="296.0" style="-fx-border-color: rgb(219, 220, 220);" HBox.hgrow="NEVER">
+               <children>
+                  <TextField prefHeight="62.0" prefWidth="235.0" promptText="Quick Search" style="-fx-background-color: #feffff; -fx-border-radius: 15; -fx-border-color: rgb(219, 220, 220); -fx-border-color: #feffff;" HBox.hgrow="ALWAYS" />
+                  <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="46.0" text="🔍" />
+               </children>
+            </HBox>
+            <Label prefHeight="63.0" prefWidth="53.0" text="Status" textFill="WHITE" HBox.hgrow="NEVER">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="63.0" prefWidth="296.0" style="-fx-border-color: rgb(219, 220, 220); -fx-background-color: #feffff;" HBox.hgrow="NEVER">
+               <children>
+                  <TextField prefHeight="65.0" prefWidth="190.0" style="-fx-background-color: #feffff; -fx-border-radius: 15; -fx-border-color: rgb(219, 220, 220); -fx-border-color: #feffff;" HBox.hgrow="ALWAYS" />
+                  <ComboBox prefHeight="67.0" prefWidth="50.0" />
+               </children>
+            </HBox>
+            <DatePicker prefHeight="63.0" prefWidth="296.0" style="-fx-background-color: #ffffff00;" HBox.hgrow="NEVER">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin></DatePicker>
+            <HBox prefHeight="63.0" prefWidth="54.0" HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER" prefHeight="59.0" prefWidth="200.0" style="-fx-background-color: #394867; -fx-border-radius: 0; -fx-border-color: rgb(219, 220, 220);">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="123.0" text="New Order" textFill="WHITE" />
+                  <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="78.0" style="-fx-background-color: #394860;" text="➕">
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <ScrollPane layoutX="-1.0" layoutY="168.0" prefHeight="571.0" prefWidth="1088.0" style="-fx-background-color: #212A3E;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0">
+         <content>
+            <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;">
+               <children>
+                  <VBox prefHeight="570.0" prefWidth="1085.0" style="-fx-background-color: #212A3E;">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="64.0" prefWidth="1088.0" style="-fx-border-style: hidden hidden solid hidden; -fx-border-color: #eaeaea;">
+                           <children>
+                              <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="O000000001" />
+                                 </children>
+                              </FlowPane>
+                              <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Ibraheem" />
+                                 </children>
+                              </FlowPane>
+                              <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="100000" />
+                                 </children>
+                              </FlowPane>
+                              <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Completed" />
+                                 </children>
+                              </FlowPane>
+                              <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+                                 </children>
+                              </FlowPane>
+                              <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Button mnemonicParsing="false" style="-fx-background-color: #394867; -fx-border-radius: 5;" text="More Details" textFill="WHITE">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </FlowPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </FlowPane>
+         </content>
+      </ScrollPane>
+      <HBox alignment="CENTER_LEFT" layoutY="104.0" prefHeight="64.0" prefWidth="1088.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Order ID" />
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name" />
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Price" />
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" />
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Discount" />
+               </children>
+            </FlowPane>
+            <FlowPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>

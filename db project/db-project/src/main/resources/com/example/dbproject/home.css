@@ -1,0 +1,9 @@
+.my-button:hover, .my-button:active {
+    -fx-border-width: 3;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-color:  #394867;
+}
+
+.active-button {
+    -fx-background-color: #394867;
+}

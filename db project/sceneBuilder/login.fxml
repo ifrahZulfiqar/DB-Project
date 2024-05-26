@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #212A3E;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dbproject.HelloController">
+   <top>
+      <VBox alignment="CENTER" prefHeight="97.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#ffffff45" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME BACK" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Log into your account">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox alignment="CENTER" fillWidth="false" prefHeight="303.0" prefWidth="461.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="204.0" prefWidth="369.0">
+               <children>
+                  <VBox prefHeight="68.0" prefWidth="315.0">
+                     <children>
+                        <Text fill="#f1f6f9" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+                        <TextField prefHeight="25.0" prefWidth="192.0" promptText="Enter your username" style="-fx-background-color: #eaeaea00; -fx-border-color: #eaeaea; -fx-border-radius: 5;">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="68.0" prefWidth="315.0">
+                     <children>
+                        <Text fill="#f1f6f9" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Text>
+                        <TextField prefHeight="25.0" prefWidth="192.0" promptText="Enter your password" style="-fx-background-color: #eaeaea00; -fx-border-color: #eaeaea; -fx-border-radius: 5;">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="65.0" prefWidth="315.0">
+                     <children>
+                        <Hyperlink text="forgot password?">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Hyperlink>
+                        <Button mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="370.0" style="-fx-border-radius: 5; -fx-background-color: #394867;" text="login" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <VBox alignment="CENTER" fillWidth="false" minHeight="-Infinity" prefHeight="100.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Developed by" textAlignment="CENTER" wrappingWidth="187.1875" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Ibraheem Bin Haseeb &amp; Ifrah Zulfiqar" />
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="64.0" prefWidth="1160.0" style="-fx-border-style: hidden hidden solid hidden; -fx-border-color: #eaeaea; -fx-background-color: #212A3E;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dbproject.byWRowController">
+   <children>
+      <FlowPane alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="39.0" HBox.hgrow="ALWAYS">
+         <children>
+            <Text fx:id="weight" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="90" HBox.hgrow="NEVER">
+         <children>
+            <Text fx:id="byQName1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Rice 50kg" textAlignment="CENTER" wrappingWidth="82.650390625" />
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+         <children>
+            <Text fx:id="productId" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="P000000001" textAlignment="CENTER" wrappingWidth="78.939453125" />
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" columnHalignment="CENTER" hgap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="89.0" prefWidth="90.0" vgap="5.0" HBox.hgrow="NEVER">
+         <children>
+            <TextField fx:id="priceInput" maxWidth="-Infinity" minWidth="-Infinity" onKeyTyped="#handlePrice" prefHeight="27.0" prefWidth="41.0" promptText="Price" style="-fx-background-color: #ffffff00; -fx-border-color: #fff; -fx-border-radius: 5; -fx-text-fill: #fff;" />
+            <Text fx:id="amount" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="5" />
+            <TextField fx:id="weightInput" maxWidth="-Infinity" minWidth="-Infinity" onKeyTyped="#handleWeight" prefHeight="27.0" prefWidth="47.0" promptText="Weight" style="-fx-background-color: #ffffff00; -fx-border-color: #fff; -fx-border-radius: 5; -fx-text-fill: #fff;" />
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+         <children>
+            <Text fx:id="price" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="1000" textAlignment="CENTER" />
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+         <children>
+            <Text fx:id="totalPrice" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="5000" textAlignment="CENTER" />
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleDelete" style="-fx-background-color: #394867; -fx-border-radius: 5;" text="Delete" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </FlowPane>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</HBox>

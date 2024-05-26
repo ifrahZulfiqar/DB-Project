@@ -1,0 +1,37 @@
+.background {
+    -fx-background-color:  #212A3E;
+}
+
+.inputHeader {
+    -fx-background-color: #fff;
+    -fx-text-fill: #fff;
+}
+
+.input {
+    -fx-background-color: #ffffff00;
+    -fx-border-color: #fff;
+    -fx-border-radius: 5;
+    -fx-text-fill: #fff;
+}
+
+.combo .text {
+    -fx-fill: #fff;
+}
+
+.combo {
+    -fx-background-color: #ffffff00;
+    -fx-border-color: #fff;
+    -fx-border-radius: 5;
+    -fx-control-inner-background: #212A3E;
+}
+
+.button {
+    -fx-background-color: #394867;
+    -fx-fill: #fff;
+    -fx-text-fill: #fff;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #2D3B4E;
+}

@@ -1,0 +1,11 @@
+.combo {
+    -fx-background-color: #ffffff00;
+        -fx-border-color: #fff;
+        -fx-border-radius: 5;
+        -fx-control-inner-background: #212A3E;
+}
+
+.combo .text {
+    -fx-fill: #fff;
+    -fx-prompt-text-fill: #fff;
+}

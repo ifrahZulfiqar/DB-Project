@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="47.0" prefWidth="747.0" style="-fx-border-color: #ffffff; -fx-background-color: #212A3E;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dbproject.addProductRowController">
+   <children>
+      <FlowPane alignment="CENTER" orientation="VERTICAL" prefHeight="72.0" prefWidth="598.0">
+         <children>
+            <Text fx:id="name" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name" />
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" orientation="VERTICAL" prefHeight="72.0" prefWidth="598.0">
+         <children>
+            <Text fx:id="weight" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Weight" />
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" orientation="VERTICAL" prefHeight="72.0" prefWidth="598.0">
+         <children>
+            <Text fx:id="uprice" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="U.Price" />
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" orientation="VERTICAL" prefHeight="72.0" prefWidth="598.0">
+         <children>
+            <Text fx:id="upurchase" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="U.Purchase" />
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" orientation="VERTICAL" prefHeight="72.0" prefWidth="598.0">
+         <children>
+            <Text fx:id="quantity" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" />
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" hgap="5.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="138.0" HBox.hgrow="ALWAYS">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleDelete" style="-fx-background-color: #394867; -fx-text-fill: #fff; -fx-border-radius: 5;" text="🚮">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleEdit" style="-fx-background-color: #394867; -fx-text-fill: #fff; -fx-border-radius: 5;" text="🖊">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children></FlowPane>
+   </children>
+</HBox>

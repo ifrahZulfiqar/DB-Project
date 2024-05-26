@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="739.0" prefWidth="1381.0" style="-fx-background-color: #212A3E;" stylesheets="@products.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dbproject.purchaseRecordsController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="84.0" prefWidth="1088.0" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label minWidth="-Infinity" prefHeight="27.0" prefWidth="102.0" text="Purchase ID" textFill="WHITE" HBox.hgrow="NEVER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+            <HBox alignment="CENTER" fillHeight="false" maxHeight="-Infinity" prefHeight="34.0" prefWidth="250.0">
+               <children>
+                  <TextField fx:id="search" prefHeight="34.0" prefWidth="174.0" promptText="Quick Search" style="-fx-background-color: #ffffff00; -fx-border-radius: 5; -fx-border-color: rgb(219, 220, 220); -fx-border-color: #feffff; -fx-text-fill: #fff;" HBox.hgrow="ALWAYS" />
+                  <Button minWidth="-Infinity" mnemonicParsing="false" prefHeight="34.0" prefWidth="50.0" style="-fx-background-color: #394867; -fx-border-radius: 5;" text="🔍" textFill="WHITE" />
+               </children>
+            </HBox>
+            <Label minWidth="-Infinity" prefWidth="34.0" text="Type" textFill="WHITE" HBox.hgrow="NEVER">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </Label>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="250.0" style="-fx-background-color: #212A3E;" HBox.hgrow="NEVER">
+               <children>
+                  <ComboBox fx:id="statusComboBox" onAction="#handleStatusController" prefHeight="32.0" prefWidth="1253.0" promptText="Choose how to filter" style="-fx-background-color: #212A3E; -fx-control-inner-background: #212A3E; -fx-text-fill: #fff; -fx-border-color: #fff; -fx-border-radius: 5; -fx-prompt-text-fill: #fff;" styleClass="combo-box" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" styleClass="container">
+               <children>
+                  <TextField prefHeight="32.0" promptText="More than x amount" styleClass="inputs" fx:id="xquantity" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </FlowPane>
+            <FlowPane alignment="CENTER" hgap="10.0" prefHeight="64.0" prefWidth="381.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="from" />
+                  <DatePicker fx:id="from" editable="false" prefHeight="32.0" prefWidth="125.0" style="-fx-background-color: #ffffff00;" styleClass="datepicker" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="to" />
+                  <DatePicker fx:id="to" editable="false" prefHeight="32.0" prefWidth="125.0" style="-fx-background-color: #ffffff00;" styleClass="datepicker" />
+                  <Button fx:id="get" mnemonicParsing="false" onAction="#handleGet" style="-fx-background-color: #394867; -fx-border-radius: 5;" text="Get" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </FlowPane>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutY="104.0" prefHeight="64.0" prefWidth="1368.0" style="-fx-border-style: solid hidden solid hidden; -fx-border-color: #fff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="13.0">
+         <children>
+            <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text fill="WHITE" onMousePressed="#sortByPurchaseId" strokeType="OUTSIDE" strokeWidth="0.0" text="Purchase ID">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text fill="WHITE" onMousePressed="#sortBySupplierName" strokeType="OUTSIDE" strokeWidth="0.0" text="Supplier Name">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text fill="WHITE" onMousePressed="#sortByTotalProducts" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Products">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Text fill="WHITE" onMousePressed="#sortByPaymentMethod" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Payment Method">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Text>
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text fill="WHITE" onMousePressed="#sortByEmployee" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Employee">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Text>
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Text fill="WHITE" onMousePressed="#sortByTotalAmount" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Total Amount in RS">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Text>
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Text fill="WHITE" onMousePressed="#sortByDate" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Date">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Text>
+               </children>
+            </FlowPane>
+            <FlowPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <ScrollPane layoutY="170.0" prefHeight="566.0" prefWidth="1381.0" style="-fx-background-color: #212A3E;" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="170.0">
+         <content>
+            <VBox fx:id="purchaseVbox" minHeight="${purchaseVbox.parent.height}" prefWidth="${purchaseVbox.parent.width}" style="-fx-background-color: #212A3E;" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

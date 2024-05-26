@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox alignment="CENTER_LEFT" prefHeight="64.0" prefWidth="1368.0" style="-fx-border-style: hidden hidden solid hidden; -fx-background-color: #212A3E; -fx-border-color: #fff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dbproject.productRowController">
+   <children>
+      <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+         <children>
+            <Text fx:id="productId" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Product ID">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+         <children>
+            <Text fx:id="productName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+         <children>
+            <Text fx:id="unitPurchaseCost" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit Purchase Cost">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Text fx:id="unitSellingCost" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Unit Selling Cost" />
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+         <children>
+            <Text fx:id="availableAmount" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Available Amount" />
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Text fx:id="weightQuantity" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Weight/Quantity" />
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Text fx:id="productType" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Product Type" />
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" hgap="10.0" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+         <children>
+            <Button fx:id="moreDetails" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleMoreDetails" prefHeight="34.0" prefWidth="36.0" style="-fx-background-color: #394867; -fx-border-radius: 5;" text="ℹ" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="delete" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleDelete" prefHeight="34.0" prefWidth="36.0" style="-fx-background-color: #394867; -fx-border-radius: 5;" text="🚮" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="edit" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleEdit" prefHeight="34.0" prefWidth="36.0" style="-fx-background-color: #394867; -fx-border-radius: 5;" text="🖊" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children></FlowPane>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</HBox>
